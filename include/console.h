@@ -2,7 +2,8 @@
 #include <Windows.h>
 #include <string>
 
-namespace console {
+namespace console
+{
 	void spawn(std::string_view window);
 	void printf(std::string_view input);
 	void kill();

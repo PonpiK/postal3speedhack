@@ -2,11 +2,12 @@
 #include <iostream>
 // Shrimple..
 // -vannie
-void console::spawn(std::string_view window) {
+void console::spawn(std::string_view window)
+{
 	if (!AllocConsole())
 		return;
 
-	FILE* f{};
+	FILE *f{};
 
 	freopen_s(&f, "CONIN$", "r", stdin);
 	freopen_s(&f, "CONOUT$", "w", stdout);
@@ -18,7 +19,8 @@ void console::spawn(std::string_view window) {
 	window_name = window;
 }
 
-void console::kill() {
+void console::kill()
+{
 	if (!open)
 		return;
 
@@ -27,8 +29,9 @@ void console::kill() {
 	PostMessageA(console, WM_QUIT, 0, 0);
 }
 
-void console::printf(std::string_view input) {
+void console::printf(std::string_view input)
+{
 	if (input.empty())
-		return; 
+		return;
 	std::cout << input.data() << "\n";
 }

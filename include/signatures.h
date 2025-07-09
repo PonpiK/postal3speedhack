@@ -1,8 +1,8 @@
 #pragma once
 #include "memory.h"
 
-
-namespace signatures {
+namespace signatures
+{
 	inline DWORD cl_move;
 
 	void init();
